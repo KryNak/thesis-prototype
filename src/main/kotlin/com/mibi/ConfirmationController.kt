@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping(path = ["/confirmation"])
 class ConfirmationController {
 
-    @GetMapping(path = ["/"])
+    @GetMapping()
     @ResponseStatus(HttpStatus.OK)
     fun index(): String{
         return "Success"
