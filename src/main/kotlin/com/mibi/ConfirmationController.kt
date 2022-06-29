@@ -1,18 +1,22 @@
 package com.mibi
 
+import mu.KotlinLogging
 import org.springframework.http.HttpStatus
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.ResponseStatus
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
+import javax.servlet.http.HttpServletRequest
+
+private val logger = KotlinLogging.logger {}
 
 @RestController
 @RequestMapping(path = ["/confirmation"])
 class ConfirmationController {
 
-    @GetMapping()
+    @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    fun index(): String{
+    fun index(@RequestHeader headers: Map<String, String>, httpServletRequest: HttpServletRequest): String{
+
+        logger.info {"\nHEADERS: $headers\nMETHOD: ${httpServletRequest.method}\nREQUEST_URL: ${httpServletRequest.requestURL}"}
+
         return "Success"
     }
 
