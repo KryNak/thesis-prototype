@@ -20,6 +20,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-security")
     implementation("com.giffing.bucket4j.spring.boot.starter:bucket4j-spring-boot-starter:0.6.1")
     implementation("org.springframework.boot:spring-boot-starter-cache")
+    implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
     implementation("org.ehcache:ehcache")
     implementation("net.logstash.logback:logstash-logback-encoder:7.2")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")

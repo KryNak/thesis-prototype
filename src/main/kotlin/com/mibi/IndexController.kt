@@ -1,15 +1,14 @@
 package com.mibi
 
-import org.springframework.http.ResponseEntity
+import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.RestController
 
-@RestController
+@Controller
 class IndexController {
 
-    @GetMapping()
-    fun index(): ResponseEntity<Void> {
-        return ResponseEntity.ok().build()
+    @GetMapping(path = ["/"])
+    fun index(): String {
+        return "index"
     }
 
 }

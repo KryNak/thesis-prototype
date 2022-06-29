@@ -15,7 +15,7 @@ class AppConfig {
         @Bean
         fun filterChain(http: HttpSecurity): SecurityFilterChain {
             http.authorizeRequests()
-                .antMatchers("*")
+                .antMatchers("*", "favicon.ico")
                 .permitAll()
 
             http.requiresChannel()
