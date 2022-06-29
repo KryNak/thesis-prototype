@@ -1,7 +1,3 @@
-server:
-  port: ${PORT}
-
-
 bucket4j:
   enabled: true
   filters:
